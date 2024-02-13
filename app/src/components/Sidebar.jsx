@@ -1,3 +1,4 @@
+import ShoppingCart from "./ShoppingCart";
 
 
 
@@ -17,13 +18,7 @@ export default function Sidebar () {
           </li>
 
           <li>
-            <div>
-              Cart
-            </div>
-            <div className="cart-with-num">
-              <span>1</span>
-              <img alt="Shopping cart icon"/>
-            </div>
+            <ShoppingCart/>
           </li>
 
         </ul>
