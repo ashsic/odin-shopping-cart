@@ -1,6 +1,6 @@
 
 
-export default function Homepage () {
+export default function Shop () {
 
   return (
     <div>
