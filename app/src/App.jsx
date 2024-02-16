@@ -5,14 +5,14 @@ import Homepage from './components/Homepage.jsx';
 import Cart from './components/Cart.jsx';
 import Shop from './components/Shop.jsx';
 import Login from './components/Login.jsx';
-
+import ErrorPage from './components/ErrorPage.jsx';
 
 function Router (props) {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Homepage />,
-      // element: <Link to="cart">aaaaa</Link>,
+      element: <Homepage cart={props.cart} />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/cart",
