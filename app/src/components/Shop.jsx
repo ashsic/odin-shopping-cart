@@ -1,3 +1,4 @@
+import SidebarCart from "./SidebarCart"
 
 
 export default function Shop () {
@@ -6,5 +7,5 @@ export default function Shop () {
     <div>
       
     </div>
-  )
-}
+  );
+};

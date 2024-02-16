@@ -11,32 +11,32 @@ function Router (props) {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Homepage cart={props.cart} />,
+      element: <Homepage cart={props.cart[0]} />,
       errorElement: <ErrorPage />,
     },
     {
       path: "/cart",
-      element: <Cart cart={props.cart} />,
+      element: <Cart cart={props.cart[0]} />,
     },
     {
       path: "/shop",
-      element: <Shop cart={props.cart} />,
+      element: <Shop cart={props.cart[0]} />,
     },
     {
       path: "/login",
-      element: <Login cart={props.cart} />,
+      element: <Login cart={props.cart[0]} />,
     },
   ]);
 
   return (
     <RouterProvider router={router} />
-  )
-}
+  );
+};
 
 function App() {
-  const [cartContents, setCartContents] = useState(
+  const [cart, setCart] = useState(
     {
-      size: 1,
+      size: 4,
       contents: [
         {
           name: "Cool Shirt",
@@ -47,8 +47,8 @@ function App() {
   );
 
   return (
-    <Router cart={cartContents} />
-  )
-}
+    <Router cart={ [cart, setCart] } />
+  );
+};
 
 export default App

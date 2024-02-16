@@ -9,18 +9,17 @@ export default function SidebarCart (props) {
 
 
   return (
-    // 
-    <>
-    {console.log(props.cart)}
-    <Link to="cart">aaaaa</Link>
+
+    <Link to="cart">
       <div>
         <p>Cart</p>
       </div>
       <div className="cart-with-num">
-        <span>1</span>
+        <span>{props.cart.size}</span>
         <img alt="Shopping cart icon"/>
+        
       </div>
-    </>
-    //</Link>
+    </Link>
+
   );
 };
