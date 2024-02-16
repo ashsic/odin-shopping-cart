@@ -1,4 +1,4 @@
-import ShoppingCart from "./ShoppingCart";
+import SidebarCart from "./SidebarCart";
 
 
 
@@ -18,7 +18,7 @@ export default function Sidebar () {
           </li>
 
           <li>
-            <ShoppingCart/>
+            <SidebarCart/>
           </li>
 
         </ul>
