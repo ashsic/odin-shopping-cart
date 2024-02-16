@@ -1,5 +1,5 @@
 import SidebarCart from "./SidebarCart";
-
+import { Link } from 'react-router-dom'
 
 
 export default function Sidebar () {

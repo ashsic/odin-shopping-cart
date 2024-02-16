@@ -1,36 +1,26 @@
 import { useState } from "react";
+import ShoppingCart from "./Cart";
+import { Link } from "react-router-dom";
 
-// Shopping cart can have items added to, removed from it, 
-// can be expanded, presence/count of items edited while expanded
 
-export default function SidebarCart () {
-  const [cartContents, setCartContents] = useState(
-    {
-      size: 1,
-      contents: [
-        {
-          name: "Cool Shirt",
-          quantity: 1
-        },
-      ]
-    }
-  );
+export default function SidebarCart (props) {
+  
 
-  const openCart = (event) => {
-    console.log(event);
-  };
+
 
   return (
-    <div onClick={openCart}>
-      
+    // 
+    <>
+    {console.log(props.cart)}
+    <Link to="cart">aaaaa</Link>
       <div>
         <p>Cart</p>
       </div>
       <div className="cart-with-num">
-        <span>{cartContents.size}</span>
+        <span>1</span>
         <img alt="Shopping cart icon"/>
       </div>
-
-    </div>
+    </>
+    //</Link>
   );
 };
