@@ -20,12 +20,29 @@ export default function Shop (props) {
 
 
   const addToCart = (e) => {
-    const itemNo = e.target.parentElement.className;
-    const newCart = {
-      size: cartItems.size + 1,
-      contents: [...cartItems.contents, shopItems[parseInt(itemNo) - 1]]
+    const itemNo = parseInt(e.target.parentElement.className);
+    let flag = true;
+    cartItems.contents.forEach((item, index) => {
+      if (item.id == itemNo) {
+        let newCart = {
+          size: cartItems.size + 1,
+          contents: cartItems.contents
+        };
+
+        newCart.contents[index].quantity += 1;
+
+        setCartItems(newCart);
+        flag = false;
+      };
+    });
+
+    if (flag) {
+      const newCart = {
+        size: cartItems.size + 1,
+        contents: [...cartItems.contents, {...shopItems[itemNo - 1], quantity: 1}]
+      };
+      setCartItems(newCart);
     };
-    setCartItems(newCart);
   };
   
 
