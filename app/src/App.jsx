@@ -8,6 +8,8 @@ import Login from './components/Login.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 
 function Router (props) {
+  //console.log('App.js', props.cart[1])
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -20,7 +22,7 @@ function Router (props) {
     },
     {
       path: "/shop",
-      element: <Shop cart={props.cart[0]} />,
+      element: <Shop cart={props.cart} />,
     },
     {
       path: "/login",
@@ -36,9 +38,10 @@ function Router (props) {
 function App() {
   const [cart, setCart] = useState(
     {
-      size: 4,
+      size: 1,
       contents: [
         {
+          id: -1,
           name: "Cool Shirt",
           quantity: 1
         },

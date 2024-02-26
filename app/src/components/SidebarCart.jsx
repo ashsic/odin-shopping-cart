@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 export default function SidebarCart (props) {
   
 
-
+  console.log(props)
 
   return (
 
-    <Link to="cart">
+    <Link to="/cart">
       <div>
         <p>Cart</p>
       </div>
