@@ -42,7 +42,9 @@ function App() {
       contents: [
         {
           id: -1,
-          name: "Cool Shirt",
+          image: 'test',
+          title: "Cool Shirt",
+          price: 10,
           quantity: 1
         },
       ]
